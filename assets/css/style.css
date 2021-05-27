@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+body {
+    background-color: #000000;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(123, 104, 238);
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: flex-end;
+    height: 100px;
+}
+.container {
+	width: 94%;
+	margin: 0 auto;
+}
+
+.cabecalho__conteudo {
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container__perfil {
+    margin: 0 0.7rem;
+
+}
+
+.informacoes__perfil {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quebra {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.nome {
+    color: rgb(123, 104, 238);
+    font-weight: bold;
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.profissao {
+    margin: 2rem 0;
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.social__media {
+    margin-top: 1rem;
+    display: flex;
+}
+
+.social__media__item {
+    color: rgb(123, 104, 238);
+    padding: 1rem 4rem;
+    border: 1px solid rgb(123, 104, 238);
+    min-width: 4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: .5s ease-in-out;
+}
+.social__media__item:hover {
+    color: #000000;
+    background-color: #FFFFFF;
+    text-decoration: none;
+}
+
+.foto__perfil {
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: 99.9%;
+    background-size: 35%;
+}
+
+.checkbox__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkbox {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9999;
+    transition: 400ms ease-in-out 0s;
+}
+
+.checkbox .trace {
+    width: 50px;
+    height: 2px;
+    background-color: rgb(123, 104, 238);;
+    position: absolute;
+    border-radius: 4px;
+    transition: 0.5s ease-in-out;
+}
+
+.checkbox .trace:nth-child(1) {
+    top: 26px;
+    transform: rotate(0)
+}
+
+.checkbox .trace:nth-child(2) {
+    top: 46px;
+    transform: rotate(0)
+}
+
+.checkbox .trace:nth-child(3) {
+    top: 66px;
+    transform: rotate(0)
+}
+
+#toggle {
+    display: none;
+}
+
+.menu {
+    position: absolute;
+    top: 28px;
+    right: 30px;
+    background-color: transparent;
+    height: 4px;
+    width: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 0px #FFFFFF;
+    z-index: -1;
+    transition: 400ms ease-in-out 0s;
+}
+
+.menu__itens {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0ms ease-in-out 0s;
+}
+
+.menu__itens ul {
+    list-style-type: none;
+}
+
+.menu__itens ul li a {
+    margin: 10px 0;
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 40px;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(1) {
+    transform: rotate(45deg);
+    top: 47px;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(2) {
+    transform: translate(-100px);
+    width: 30px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 47px;
+}
+
+#toggle:checked + .checkbox {
+    background-color: #FFFFFF;
+}
+
+#toggle:checked ~ .menu {
+    box-shadow: 0px 0px 0px 100vmax #FFFFFF;
+    z-index: 1;
+}
+
+#toggle:checked ~ .menu__itens {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media screen and (max-width: 800px){
+    .container__perfil {
+		width: 94%;
+        margin: 0 auto;
+        height: 600px;
+	}
+    .informacoes__perfil {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .quebra {
+        justify-content: center;
+    }
+
+    .titulo {
+        justify-content: center;
+        text-align: center;
+    }
+    .social__media__item {
+        max-width: 9rem;
+    }
+    .foto {
+        margin: 2rem 0;
+        justify-content: center;
+    }
+    .foto__perfil {
+        width: 200px;
+        height: 200px
+    }
+
+    .conteudo__carrossel {
+        margin: rem 0;
+    }
+}
