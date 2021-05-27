@@ -1,0 +1,53 @@
+.card__foto {
+    filter: grayscale(0.9);
+    color: #1E1E2A;
+    transition: 0.5s ease-in-out;
+}
+
+.card__foto:hover {
+    filter: unset;
+}
+
+.card__wrapper {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.borda__cor {
+  border: 1px solid black;
+}
+
+.borda__cor:hover {
+    border: 2px solid black;
+  }
+
+.card__largura{
+  max-width: 18rem;
+}
+
+.card__titulo {
+ font-size: 18px;
+ text-transform: uppercase;
+
+}
+
+.card__texto {
+    text-align: justify;
+    font-size: 10px;
+    visibility: visible;
+    opacity: 0;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+
+
+.card__texto:hover{
+    opacity: 1;
+    visibility: visible;
+    font-size: 14px;
+}
