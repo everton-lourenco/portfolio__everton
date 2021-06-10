@@ -214,6 +214,7 @@ body {
         height: 600px;
 	}
     .informacoes__perfil {
+        height: auto;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -237,9 +238,5 @@ body {
     .foto__perfil {
         width: 200px;
         height: 200px
-    }
-
-    .conteudo__carrossel {
-        margin: rem 0;
     }
 }
