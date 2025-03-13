@@ -37,9 +37,10 @@ body {
 
 .quebra {
     display: flex;
-    align-items: center;
+    align-items: start;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .nome {
@@ -221,6 +222,7 @@ body {
     }
 
     .quebra {
+        align-items: center;
         justify-content: center;
     }
 
