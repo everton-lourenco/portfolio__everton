@@ -230,9 +230,10 @@ body {
         justify-content: center;
         text-align: center;
     }
-    .social__media__item {
-        max-width: 9rem;
+    .social__media {
+        flex-direction: column;
     }
+
     .foto {
         margin: 2rem 0;
         justify-content: center;
